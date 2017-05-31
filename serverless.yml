@@ -1,0 +1,40 @@
+# Welcome to serverless. Read the docs
+# https://serverless.com/framework/docs/
+
+# Serverless.yml is the configuration the CLI
+# uses to deploy your code to your provider of choice
+
+# The `service` block is the name of the service
+service: aws-lambda-jwt-dynamo
+
+# The `provider` block defines where your service will be deployed
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+# The `functions` block defines what code to deploy
+functions:
+  login:
+    handler: handler.login
+    # The `events` block defines how to trigger the handler.helloWorld code
+    events:
+      - http:
+          path: login
+          method: post
+          cors: true
+
+  createUser:
+    handler: handler.createUser
+    events:
+    - http:
+      path: createUser
+      method: post
+      cors: true
+
+  nextHolidayCountry:
+    handler: handler.nextHolidayCountry
+    events:
+    - http:
+      path: nextHolidayCountry
+      method: get
+      cors: true
