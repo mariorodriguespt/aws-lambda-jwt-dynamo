@@ -9,8 +9,8 @@ const JWT_SECRET = "f46ab500ecf9de1df68d9475df3020fc7da0a61a";
 
 AWS.config.update({
   region: "us-west-2",
-  accessKeyId : "AKIAJQP4ANFFOKQD3D6Q",
-  secretAccessKey : "8fvvNNEGB+8xvfN7w3XwSCQizZZJBptttLJ9g2UX"
+  accessKeyId : "YOUR_ACCESS_KEY",
+  secretAccessKey : "YOUR_SECRET_KEY"
 });
 
 //const dynamoClient = AWS.DynamoDB.DocumentClient();
